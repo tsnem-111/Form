@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="nemo.css">
+  <!-- <script> const scriptURL = 'https://script.google.com/macros/s/AKfycbx9_0UvXm65zPIc8dDORsYHQV8y4PTznFMOvBqujlm3DyBJs7xqdh42Gt41Y37Zyyj1Rg/exec';</script>-->
+
+</head>
+<body>
+
+
+
+
+    <div class="login-wrapper">
+
+      <div id="responseMessage" class="response-message"></div>
+        <form   method="post" action="" id="contactForm">
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="input-field">
+                <input type="text" required name="name"  style="color: white;">
+                <label> Enter your name </label>
+            </div>
+
+            <div class="input-field">
+                <input type="tel" required   name="number"  style="color: white;">
+                <label> Enter your number </label>
+            </div>
+
+
+            <div class="input-field">
+                <input type="year" required name="year"   style="color: white;">
+                <label> Year  Level </label>
+            </div>
+
+
+
+            <div class="input-field">
+                <input type="college" required name="college"  style="color: white;">
+                <label> Enter your college </label>
+            </div>    
+
+
+
+
+            <div class="input-field">
+                <input type="message" required name="message" style="color: white;">
+                <label> Why do you want to join our team ? </label>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="input-group">
+      
+      
+            <select id="answerSelect" name="answer"  style="color: white;" >
+             
+                <option value="" disabled selected>  what's your experience</option>
+                
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="More">More</option>
+                <option value="None">None</option>
+
+            </select>
+        </div>
+
+
+
+            
+
+
+
+
+
+
+
+            <!--<div class="input-group">
+            <label for="questionInput"> Your experience</label>-->
+            <!--<input type="text" id="questionInput" placeholder=" Your experience" readonly value=" Your experience">
+            </div>-->
+
+       
+
+
+
+
+
+            
+ <button type="submit" class="glow-btn"> <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Join Our Team
+
+ </button>
+            
+
+
+        </form>
+
+
+
+        <div id="formStatusMessage" style="margin-top: 20px; font-weight: bold; text-align: center; color: black;">
+    </div>
+
+
+      
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+  const select = document.getElementById('answerSelect');
+
+  select.addEventListener('change', function () {
+    if (this.value === "") {
+      this.style.color = "gray"; // لون السؤال
+    } else {
+      this.style.color = "white"; // لون الاختيارات العادية
+    }
+  });
+
+  // في حالة كان المستخدم ما اختارش لسه
+  window.addEventListener('load', function () {
+    if (select.value === "") {
+      select.style.color = "gray";
+    }
+  });
+</script>
+
+
+
+
+<style>
+  .form-group {
+    margin-bottom: 20px; /* يتحكم في المسافة بين كل عنصر */
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+  border-bottom: 2px solid black;
+    background: transparent;
+    /*color: white;*/
+    font-size: 16px;
+    outline: none;
+  }
+
+  select:invalid {
+    color: gray;
+  }
+
+  </style>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+  .form-group {
+    margin-bottom: 20px; /* يتحكم في المسافة بين كل عنصر */
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    /*color: white;*/
+    font-size: 16px;
+    outline: none;
+  }
+
+  select:invalid {
+    color: gray;
+  }
+
+  select:valid {
+    color: white;
+  }
+
+</style>
+
+<script src="nemo.js"></script>
+</body>
+</html>

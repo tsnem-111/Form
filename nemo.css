@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+    margin:0;
+    padding: 0;
+  box-sizing: border-box;
+  font-family: 'opensans', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(/DeWatermark.ai_1750791787883.jpeg);
+   
+
+   
+}
+body::before{
+   content: "";
+    position: absolute;    
+    width: 100%;
+    height: 100%;
+   
+    background-size: cover;
+    background-position: center;
+    
+}
+.login-wrapper{
+    width: 70%;
+   /* padding: 30px;*/
+    padding: 60PX 40px;
+height: 90vh;
+
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}   
+
+
+
+
+.login-wrapper{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 400px;
+ 
+  padding: 30px;
+  border-radius: 10px;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+form h2{
+font-size: 2rem;
+color: white;
+margin-bottom: 20px;
+}
+.input-field{
+    position: relative;
+    margin: 15px 0;
+    border-bottom: 2px solid black;
+}
+
+
+
+.input-field::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+
+
+
+.input-field input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background:transparent;
+    color: #000000;
+    font-size: 0.9rem;
+}
+.input-field label{
+    position: absolute;
+    bottom:  30px;
+    left: 0;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 1rem;
+    pointer-events: none;
+    transition:  0.3s ease;
+}
+.input-field input:focus + label,
+.input-field input:valid + label{
+   transform: translateY(-120%);
+    color: #ccc;
+    font-size: 0.8rem;
+    bottom:  15px; 
+}
+
+.input-group input{
+    position: relative;
+        margin: 15px 0;
+         width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    font-size: 1rem;
+
+     
+ 
+    left: 0;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 1rem;
+    pointer-events: none;
+    transition:  0.3s ease;
+
+
+    /*border-bottom: 2px solid black;*/
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label{
+   transform: translateY(-120%);
+    color: black;
+    font-size: 0.8rem;
+    top: 3px; 
+}
+
+.input-group::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+
+
+
+
+ select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;    
+    
+}
+
+
+
+
+.glow-btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #03e9f4;
+  background: black;
+  border: 2px solid #03e9f4;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  font-size: 16px;
+  border-radius: 6px;
+  top: 0px;
+}
+
+.glow-btn:hover {
+background: rgba(3, 233, 244, 0.7);
+  color: #fff;
+  box-shadow: 0 0 2px #03e9f4,
+              0 0 10px #03e9f4,
+              0 0 20px #03e9f4,
+              0 0 40px #03e9f4;
+}
+
+.glow-btn span {
+  position: absolute;
+  display: block;
+}
+
+.glow-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+.glow-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s;
+}
+
+.glow-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s;
+}
+
+.glow-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s;
+}
+
+/* Animations */
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* شاشات الموبايل الصغيرة - أقل من 576px */
+@media (max-width: 575px) {
+  /* اعدلي هنا التنسيقات للموبايل */
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .flex-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* شاشات التابلت - من 576px لحد 768px */
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .flex-item {
+    flex: 1 1 48%;
+  }
+}
+
+/* شاشات اللابتوب - من 768px لحد 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+
+  .flex-item {
+    flex: 1 1 45%;
+  }
+}
+
+/* شاشات الديسكتوب - فوق 992px */
+@media (min-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+
+  .flex-item {
+    flex: 1 1 30%;
+  }
+}
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  max-width: 100%;
+}
+
+
+
+
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .flex-box {
+    flex-direction: column;
+  }
+
+  .flex-item {
+    width: 100%;
+  }
+
+  h1, h2, h3, p {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+      button{
+  font-weight: 600;
+ padding: 12px 20px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition:  0.3s ease;
+   
+}
+button:hover{
+    background: rgb(225, 225, 225, 0.5);
+    color: white;
+    border-color: white;
+}*/
