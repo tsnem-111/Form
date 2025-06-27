@@ -13,7 +13,7 @@ statusMessageDiv.textContent = '';
     .then(response => {
       // You might want to parse response.json() if your Apps Script returns JSON
       // console.log(response); 
-      alert('نورتنا يا يا كبير !');
+      alert('نورتنا  يا كبير !');
       window.location.reload(); // Reload the page after successful submission
     })
     .catch(error => console.error('Error!', error.message));
